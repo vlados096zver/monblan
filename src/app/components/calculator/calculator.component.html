@@ -1,0 +1,42 @@
+
+<div class="calculator__col">
+  <div class="calculator__row">
+    <p class="calculator__label">Сума:</p>
+    <app-input-value [control]="sum" [step]="50" [min]="1000" [max]="15000">грн</app-input-value>
+  </div>
+  <app-input-range [control]="sum" [step]="50" [min]="1000" [max]="15000"></app-input-range>
+  <div class="calculator__holder">
+    <p class="calculator__value">1000 грн</p>
+    <p class="calculator__value">15 000 грн</p>
+  </div>
+</div>
+
+<div class="calculator__col">
+  <div class="calculator__row">
+    <p class="calculator__label">Термін платежу:</p>
+    <app-input-value [control]="days" [step]="1" [min]="10" [max]="30">дн.</app-input-value>
+  </div>
+  <app-input-range [control]="days" [step]="1" [min]="10" [max]="30"></app-input-range>
+  <div class="calculator__holder">
+    <p class="calculator__value">100 днів</p>
+    <p class="calculator__value">30 днів</p>
+  </div>
+</div>
+
+<div class="calculator__inner">
+  <div class="calculator__row">
+    <p class="calculator__label">Сума:</p>
+    <p class="calculator__elem">{{sum.value}} грн.</p>
+  </div>
+  <div class="calculator__row">
+    <p class="calculator__label">Плата за кредит:</p>
+    <p class="calculator__elem">1000 грн.</p>
+  </div>
+  <div class="calculator__row">
+    <p class="calculator__label">Сума погашення 17.10.2023:</p>
+    <p class="calculator__elem">4200 грн.</p>
+  </div>
+</div>
+<button class="btn btn--center">Надіслати заявку на кредит</button>
+<p class="calculator__desc">Цей віджет не є кредитним калькулятором у розумінні постанови правління НБУ від 05.10.2021 №100 та відображає умови кредитування протягом пільгового періоду (до 30 днів). Повну інформацію про загальні умови кредитування дивіться
+  <a href="#" target="_blank">тут</a>, персональні - в договорі.</p>

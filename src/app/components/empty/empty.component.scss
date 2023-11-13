@@ -1,0 +1,23 @@
+@import 'variables';
+
+.empty {
+  background-color: #fff;
+  padding: 74px 40px;
+  border-radius: 10px;
+  .btn {
+    width: auto;
+  }
+  &__icon {
+    max-width: 124px;
+    margin: 0 auto 38px;
+  }
+  &__text {
+    font-size: 20px;
+    color: #B54DA9;
+    text-align: center;
+    margin-bottom: 50px;
+    @include media(sm) {
+      font-size: 18px;
+    }
+  }
+}

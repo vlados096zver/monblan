@@ -1,0 +1,10 @@
+<div (click)="minus()" class="minus"><app-icon-minus></app-icon-minus></div>
+  <input
+    [formControl]="componentControl"
+    type="range"
+    [min]="min"
+    [max]="max"
+    name="range"
+    [step]="step"
+  />
+<div (click)="plus()" class="plus"><app-icon-plus></app-icon-plus></div>

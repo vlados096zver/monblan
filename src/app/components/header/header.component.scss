@@ -1,0 +1,125 @@
+@import 'variables';
+
+.header {
+  padding-top: 35px;
+  padding-bottom: 30px;
+  @include media(sm) {
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+  .menu__wrap-line {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__holder {
+    width: calc(100% - 318px);
+    max-width: calc(100% - 318px);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    @include media(xxs) {
+      width: calc(100% - 272px);
+      max-width: calc(100% - 272px);
+    }
+    @include media(mini) {
+      width: calc(100% - 235px);
+      max-width: calc(100% - 235px);
+    }
+    @include media(small) {
+      width: calc(100% - 210px);
+      max-width: calc(100% - 210px);
+    }
+  }
+  &__inner {
+    width: 318px;
+    display: flex;
+    align-items: center;
+    @include media(xxs) {
+      width: 272px;
+    }
+    @include media(mini) {
+      width: 235px;
+    }
+    @include media(small) {
+      width: 210px;
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__link {
+    white-space: nowrap;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #000000;
+    margin-right: 30px;
+    @include media(mdx) {
+      font-size: 16px;
+      margin-right: 16px;
+    }
+    &.hidden {
+      width: 0;
+      max-width: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
+  &__submenu {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    top: 118px;
+    left: 0;
+    width: 100%;
+    background-color: #F1F1F1;
+    transition: 0.25s opacity, 0.25s visibility;
+    @include media(sm) {
+      top: 98px;
+      background-color: #fff;
+      border-bottom: 1px solid #000000;
+    }
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    padding: 17px 0;
+    @include media(sm) {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  &__box {
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #000000;
+    @include media(mdx) {
+      font-size: 16px;
+    }
+    @include media(sm) {
+      padding: 10px;
+    }
+    &:not(:last-child) {
+      margin-right: 30px;
+      @include media(mdx) {
+        margin-right: 16px;
+      }
+      @include media(sm) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+

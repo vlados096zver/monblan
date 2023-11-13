@@ -1,0 +1,51 @@
+@import 'variables';
+
+:host {
+  display: block;
+  background-color: #EFF4F6;
+  padding: 45px 60px 35px;
+  margin-bottom: 94px;
+  @include media(mdx) {
+    margin-bottom: 70px;
+  }
+  @include media(smdx) {
+    padding: 35px 20px;
+  }
+  @include media(sm) {
+    margin-bottom: 50px;
+  }
+  &.page-account {
+    padding: 0px;
+    margin: 0;
+  }
+  .btn {
+    width: auto;
+  }
+}
+
+.calculator {
+  &__elem {
+    max-width: 130px;
+    width: 100%;
+    font-size: 18px;
+    color: #B54DA9;
+    background-color: #D9E0E3;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px 5px;
+  }
+  &__inner {
+    padding: 34px 0;
+  }
+  &__desc {
+    font-size: 14px;
+    line-height: 1.44;
+    color: #AAAAAA;
+    text-align: center;
+    padding-top: 50px;
+    a {
+      color: #B54DA9;
+      text-decoration: none;
+    }
+  }
+}

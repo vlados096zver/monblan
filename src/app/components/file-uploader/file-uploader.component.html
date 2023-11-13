@@ -1,0 +1,15 @@
+<div class="file__holder"
+     (dragover)="onDragOver($event)"
+     (dragenter)="onDragEnter($event)"
+     (dragleave)="onDragLeave($event)"
+     (drop)="onDrop($event)">
+  <div class="file__icon">
+    <app-icon-load></app-icon-load>
+  </div>
+  <p class="file__info">Тут Ви можете завантажити документи</p>
+  <p class="file__text">PDF, WORD, XLSX, не більше 5 мегабайт кожен</p>
+  <div class="file__block">
+    <label for="input-file" class="btn btn--center">Обрати документи</label>
+    <input type="file" id="input-file" class="file__input" (change)="handleFileInput($event.target)" #fileInput>
+  </div>
+</div>

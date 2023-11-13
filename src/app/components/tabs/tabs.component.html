@@ -1,0 +1,20 @@
+
+
+<button type="button" class="tabs__link"
+     (click)="onTabChange(i)"
+     [class.tabs__link--active]="i === activeTab"
+     *ngFor="let tab of tabs; let i = index">
+<app-icon-cabinet *ngIf="tab.icon === 'cabinet'"
+                  class="tabs__icon"
+                  [class.tabs__icon--active]="i === activeTab"></app-icon-cabinet>
+  <app-icon-history *ngIf="tab.icon === 'history'"
+                    class="tabs__icon"
+                    [class.tabs__icon--active]="i === activeTab"></app-icon-history>
+  <app-icon-credit *ngIf="tab.icon === 'credit'"
+                    class="tabs__icon"
+                    [class.tabs__icon--active]="i === activeTab"></app-icon-credit>
+  <app-icon-doc *ngIf="tab.icon === 'doc'"
+                   class="tabs__icon"
+                   [class.tabs__icon--active]="i === activeTab"></app-icon-doc>
+  <span class="tabs__text">{{tab.title }}</span>
+</button>

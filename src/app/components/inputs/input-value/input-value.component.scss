@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 130px;
+}
+
+.input__elem {
+  width: 100%;
+  font-size: 18px;
+  color: #B54DA9;
+  background-color: #D9E0E3;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px 5px;
+  span {
+    padding-right: 3px;
+  }
+}
+
+

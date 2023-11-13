@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px 25px 0 16px;
+  margin-bottom: 20px;
+}
+
+.doc {
+  &__title {
+    font-size: 14px;
+    color: #B9B9B9;
+  }
+  &__icon {
+    margin-right: 18px;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-bottom: 20px;
+    font-family: Roboto, sans-serif;
+    &:hover {
+      .doc__elem {
+        color: #d66a3c;
+      }
+      .doc__close {
+        fill: #d66a3c;
+      }
+    }
+  }
+  &__elem {
+    font-size: 14px;
+    color: #F97C46;
+    padding-right: 20px;
+    transition: 0.25s color;
+  }
+  &__close {
+    fill: #F97C46;
+    transition: 0.25s fill;
+  }
+}

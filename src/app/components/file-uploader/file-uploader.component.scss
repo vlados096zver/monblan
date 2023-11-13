@@ -1,0 +1,44 @@
+@import 'variables';
+
+:host {
+  .btn {
+    max-width: 220px;
+  }
+}
+
+.file {
+  &__holder {
+    border: 4px dotted #D9E0E2;
+    border-radius: 10px;
+    padding: 44px;
+    margin-bottom: 60px;
+    @include media(sm) {
+      padding: 40px 20px;
+    }
+  }
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  &__icon {
+    max-width: 108px;
+    margin: 0 auto 42px;
+  }
+  &__info {
+    font-size: 20px;
+    color: #B54DA9;
+    text-align: center;
+    margin-bottom: 28px;
+    @include media(sm) {
+      font-size: 18px;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    color: #B9B9B9;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}

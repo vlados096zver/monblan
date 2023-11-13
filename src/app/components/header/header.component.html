@@ -1,0 +1,37 @@
+<header class="header">
+  <div class="container container--header">
+    <div class="header__wrap" #headerWrap>
+      <div class="header__holder">
+        <div class="menu__wrap-line" #headerBurger (click)="changeStateSubmenu()" [class.active]="showSubmenu">
+          <div class="menu__block">
+            <span class="menu__icon-top" [class.active]="showSubmenu"></span>
+            <span class="menu__icon-middle" [class.active]="showSubmenu"></span>
+            <span class="menu__icon-bottom" [class.active]="showSubmenu"></span>
+          </div>
+        </div>
+        <ul class="header__list">
+          <li class="header__link"
+               *ngFor="let item of menuItems; let index = index "
+               #point
+               [class.hidden]="index > lastVisibleIndex || lastVisibleIndex == 0" routerLink="{{item.href}}">{{item.title}}</li>
+      </ul>
+    </div>
+      <div class="header__inner" #headerBtns>
+        <button class="btn btn--reg" routerLink="/signup">Зареєструватись</button>
+        <button class="btn btn--login" routerLink="/">Увійти</button>
+      </div>
+    </div>
+
+  </div>
+  <div class="header__submenu" [class.active]="showSubmenu">
+    <div class="container container--header">
+      <ul class="header__row">
+        <ng-container *ngFor="let item of menuItems; let index = index">
+          <li class="header__box" *ngIf="index > lastVisibleIndex" routerLink="{{item.href}}">{{item.title}}</li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</header>
+
+

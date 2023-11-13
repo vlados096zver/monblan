@@ -1,0 +1,62 @@
+<section class="account">
+  <div class="container container--account">
+    <div class="account__wrap" [class.active]="showSidebar">
+      <div class="account__item account__item--sidebar">
+        <div class="account__block">
+          <app-icon-logo  class="logo"></app-icon-logo>
+          <p class="account__info">Привіт, Кирило Гаврилів</p>
+        </div>
+        <app-tabs [tabs]="tabs" (activeTabChange)="changeState($event)" [(activeTab)]="activeTab"></app-tabs>
+        <button class="account__btn">Вихід</button>
+      </div>
+      <div class="account__item account__item--content">
+        <div class="account__box">
+          <div class="account__line">
+              <app-icon-logo class="logo"></app-icon-logo>
+              <div class="menu__wrap-line" (click)="changeStateSidebar()" [class.active]="showSidebar">
+                <div class="menu__block">
+                  <span class="menu__icon-top" [class.active]="showSidebar"></span>
+                  <span class="menu__icon-middle" [class.active]="showSidebar"></span>
+                  <span class="menu__icon-bottom" [class.active]="showSidebar"></span>
+                </div>
+              </div>
+          </div>
+          <ng-container *ngIf="activeTab === 0">
+              <p class="account__title">Мій кабінет</p>
+
+              <div class="account__col">
+                <p class="account__subtitle">Персональні дані</p>
+                <button class="btn">Змінити дані</button>
+              </div>
+
+              <div class="account__col">
+                <p class="account__subtitle">Контактні дані</p>
+                <button class="btn">Змінити пошту</button>
+              </div>
+
+              <div class="account__col">
+                 <button class="btn">Змінити телефон</button>
+              </div>
+          </ng-container>
+          <ng-container *ngIf="activeTab === 1">
+              <p class="account__title">Історія кредиту</p>
+              <app-empty (onButtonClick)="creditApplication()"></app-empty>
+          </ng-container>
+          <ng-container *ngIf="activeTab === 2">
+             <p class="account__title">Заявка на кредит</p>
+              <app-calculator class="page-account"></app-calculator>
+          </ng-container>
+          <ng-container *ngIf="activeTab === 3">
+             <p class="account__title">Надіслати документи</p>
+              <app-file-uploader></app-file-uploader>
+              <div class="doc__wrap">
+                <app-doc></app-doc>
+                <app-doc></app-doc>
+              </div>
+              <button class="btn">Надіслати</button>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

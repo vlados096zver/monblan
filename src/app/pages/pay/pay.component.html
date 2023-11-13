@@ -1,0 +1,61 @@
+<app-header></app-header>
+
+<section class="calculator">
+  <div class="container container--inner">
+    <ul class="breadcrumbs__list">
+      <li><a routerLink="/">Головна</a></li>
+      <li>Як погасити</li>
+    </ul>
+    <h1 class="title">Виберіть спосіб оплати</h1>
+  </div>
+</section>
+
+<section class="text">
+  <div class="container container--inner">
+    <div class="text__content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pay">
+  <div class="container container--inner">
+    <p class="title">Оплата онлайн</p>
+  </div>
+  <div class="container container--bg">
+    <div class="pay__holder">
+      <div class="calculator__col">
+          <div class="calculator__row">
+            <p class="calculator__label">Сума:</p>
+            <app-input-value [control]="sum" [step]="50" [min]="1000" [max]="15000">грн</app-input-value>
+          </div>
+          <app-input-range [control]="sum" [step]="50" [min]="1000" [max]="15000"></app-input-range>
+          <div class="calculator__holder">
+            <p class="calculator__value">1000 грн</p>
+            <p class="calculator__value">15 000 грн</p>
+          </div>
+       </div>
+      <button class="btn btn--center">Сплатити онлайн</button>
+    </div>
+  </div>
+</section>
+
+<section class="text">
+  <div class="container container--inner">
+    <p class="title">Оплатити на рахунок</p>
+    <div class="text__content">
+      <p>Погасіть позику шляхом оплати на рахунок ФІН2ГОУ за наступними реквізитами</p>
+      <p>Одержувач: ТОВ «ФК «ФІН2ГОУ»Код ЄДРПОУ: 43497928IBAN — UA 67 321723 0000026501011006748в ПАТ «БТА БАНК», МФО 321723абоIBAN — UA 28 322313 0000026502000000787в АТ «УКРЕКСІМБАНК», МФО 322313</p>
+      <p>Призначення платежу: Сплата процентів/тіла за договором позики №ххх від хх.хх.ххх року; ІПН (платника)</p>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,139 @@
+@import 'variables';
+
+:host {
+  .btn {
+    width: auto;
+  }
+}
+
+.account {
+  background-color: #D9E0E3;
+  &__wrap {
+    display: flex;
+    &.active {
+      .account__item--sidebar {
+          @include media(sm) {
+            transform: translateX(0);
+          }
+      }
+      .account__item--burger {
+        @include media(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+  &__item {
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &--sidebar {
+      width: 315px;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      @include media(mdx) {
+        width: 275px;
+      }
+      @include media(sm) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: 0.25s transform;
+      }
+    }
+    &--content {
+      width: calc(100% - 315px);
+      background-color: #EFF4F6;
+      @include media(mdx) {
+        width: calc(100% - 275px);
+      }
+      @include media(sm) {
+        width:100%
+      }
+    }
+  }
+  &__info {
+    color: #FA7D43;
+    font-weight: 700;
+  }
+  &__block {
+    padding: 50px 30px 30px;
+    @include media(sm) {
+      padding: 40px 20px;
+    }
+  }
+  &__box {
+    padding: 50px 60px;
+    @include media(mdx) {
+      padding: 50px 40px;
+    }
+    @include media(sm) {
+      padding: 40px 20px;
+    }
+  }
+  &__btn {
+    cursor: pointer;
+    display: block;
+    max-width: 138px;
+    width: 100%;
+    color: #FA7D43;
+    background: transparent;
+    border: 1px solid #FA7D43;
+    border-radius: 20px;
+    padding: 11px 6px;
+    margin: auto auto 50px;
+    font-family: Roboto, sans-serif;
+    transition: 0.25s background-color, 0.25s color;
+    &:hover {
+      color: #fff;
+      background-color: #FA7D43;
+    }
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #142245;
+    margin-bottom: 35px;
+    font-weight: 700;
+    @include media(mdx) {
+      font-size: 30px;
+    }
+    @include media(sm) {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+  }
+  &__subtitle {
+    font-size: 20px;
+    line-height: 1.2;
+    color: #142245;
+    margin-bottom: 36px;
+    font-weight: 700;
+  }
+  &__col {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+  &__line {
+    display: none;
+    @include media(sm) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__burger {
+    margin-bottom: 40px;
+  }
+}
+
+.doc {
+  &__wrap {
+    padding-bottom: 20px;
+  }
+}
